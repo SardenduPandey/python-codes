@@ -5,12 +5,18 @@
 def count_letters(text):
   result = {}
   # Go through each letter in the text
-  for letter in ___:
+  for letter in text:
+    letter=letter.lower()
     # Check if the letter needs to be counted or not
-    ___
-    # Add or increment the value in the dictionary
-    ___
+    if letter.isalpha():
+      if letter not in result:
+        result[letter]=0
+   # Add or increment the value in the dictionary
+      result[letter] +=1
+    
+
   return result
+
 
 print(count_letters("AaBbCc"))
 # Should be {'a': 2, 'b': 2, 'c': 2}
