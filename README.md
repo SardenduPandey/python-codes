@@ -1,4 +1,1 @@
-# python-codes
-Adding the python codes to git repo
-
-print("Hello World::")
+This repository use to store all my python codes with their problem statements.
