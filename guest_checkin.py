@@ -5,14 +5,13 @@ guests = open("guests.txt", "r+")               #'r+' = read and write
 initial_guests = ["Bob", "Andrea", "Manuel", "Polly", "Khalid"]
 print('Initial Guests:')
 for i in initial_guests:
-    guests.write(i + "\n")
+    guests.write(i + "\t")
     print(i.upper())
     
 guests.close()
 
 '''New guests chechek in '''
 new_guests = ["Sam", "Danielle", "Jacob"]
-
 with open("guests.txt", "a") as guests:         #'a' = append (to add elements in files)
     for i in new_guests:
         guests.write(i + "\n")
@@ -21,6 +20,7 @@ guests.close()
 
 '''Display the current guest staying in Hotel '''
 with open("guests.txt") as guests:              #by deafult its 'r'
+    print("\nChecking current Status...\nTotal Guest in Hotel\n")
     for line in guests:
         print(line)
 
@@ -37,12 +37,16 @@ with open("guests.txt", "w") as guests:
         if name not in checked_out:
             guests.write(name + "\n")
 
-'''Display the current guest staying in Hotel '''
-
+'''Display the current guest staying in Hotel after checkout '''
 with open("guests.txt") as guests:
+    print("\nChecking current Status...\nTotal Guest in Hotel\n")
     for line in guests:
         print(line)
+
+
 '''checking the status of 2 guest'''
+
+print("Checking the status of 2 random Guests")
 guests_to_check = ['Bob', 'Andrea']
 checked_in = []
 
