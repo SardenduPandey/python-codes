@@ -27,7 +27,7 @@ def contents_of_file(filename):
   # Open the file
   with open("flowers.csv") as file:
     # Read the rows of the file into a dictionary
-    read = csv.DictReader(filename)
+    read = csv.DictReader(file)       #error in was in this line 
     # Process each item of the dictionary
     for row in read:
       return_string += "a {} {} is {}\n".format(row["color"], row["name"], row["type"])
